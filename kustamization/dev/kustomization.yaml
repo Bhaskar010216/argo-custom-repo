@@ -1,7 +1,8 @@
 resources:
   - ../base
+  - namespace.yaml      # ensure namespace is created by kustomize
 
-namespace: kustomapp  
+namespace: kustomapp
 
 patchesStrategicMerge:
   - replicas.yaml
@@ -10,4 +11,5 @@ configMapGenerator:
   - name: app-config
     files:
       - config.properties
+
 
