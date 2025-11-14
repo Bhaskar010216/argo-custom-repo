@@ -13,5 +13,5 @@ spec:
     protocol: TCP
     port: 9090
     targetPort: 9090
-    nodePort: 31111
+    nodePort: 31115
 
