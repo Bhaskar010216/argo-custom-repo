@@ -1,9 +1,13 @@
 resources:
-- ../base
-namespace: kustomapp
-patches:
-- path: replicas.yaml
+  - ../base
+
+namespace: kustomapp  
+
+patchesStrategicMerge:
+  - replicas.yaml
+
 configMapGenerator:
-- name: testcm
-  env: config.properties
+  - name: app-config
+    files:
+      - config.properties
 
